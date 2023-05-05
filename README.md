@@ -6,7 +6,7 @@ pcb edge cuts are provided courtesy of astro of matrixlab [here](https://geekhac
 
 indicator LEDs on scroll lock and caps lock. JST is s3b ph 3 pin, since that's what it looks like from watching youtube build videos. split backspace and split right shift are included in spite of default plate not including those positions. iso is not included in spite of default plate including those positions. usb port placement is mostly based off guesswork and eyeballing it. there's also a nice little reset jumper beneath the space bar. also included is a little pad to ground on the back, in case you think you can add conductive foam to case to route esd shorts to ground. maybe you can solder some wire to a mounting screw or something, i don't know. this thing costs like over a hundred bucks to proto at jlcpcb and i don't have that kinda cash yet. the routing is extremely messy.
 
-lightbar mounting holes on PCB are slightly off-spec, and are plated m3 (edge cuts seem to imply the hole is a bit wider).
+lightbar mounting holes on PCB are slightly off-spec, and are plated m3 (edge cuts seem to imply the hole is a bit wider). lightbar is now connected to PCB through a molex pico ezmate cable. use the standard ones, which are 1-4, and not cables designed to be compatible with unified daughterboard s1/c4, which are wired 1-1. i fee like ezmate should be able to retain the plug even if the cable has to be bent a bit to route it, but don't quote me on that.
 
 i don't know if i'm allowed to license this, given the pcb edge cuts this is based off of were released without a license.
 
@@ -14,13 +14,12 @@ this is completely untested.
 
 ## todo
 
-1. fill out BOM?
-1a. measure and source standoffs that are good enough and ultra low profile screws
-2. split main pcb and lightbar pcb separately so jlcpcb production files don't keep bothering each other
-3. adjust placement of diodes
-4. consider alternative to ws2812 2020
-5. consider pico ezmate or something instead of jst-ph + directly soldered cable
+1. fill out BOM real good
+2. measure and source standoffs that are good enough and ultra low profile screws
+3. split main pcb and lightbar pcb separately so jlcpcb production files don't keep bothering each other
+4. adjust placement of ws2812 based on if it is too far to one side of the lightbar or the other.
+5. consider alternative to ws2812 2020 for power consumption/cost reasons.
 6. prototype PCB and lightbar
 7. firmware (come on, this is basically automated at this point)
-8. verify this works with original lightbar
+8. ~~verify this works with original lightbar~~ see if you can jam jst s3b ph footprint on top of ezmate without pads touching
 
