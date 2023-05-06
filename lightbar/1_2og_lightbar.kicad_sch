@@ -1740,7 +1740,7 @@
     (property "Value" "Conn_01x03" (at 157.099 43.815 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Connector_Molex:Molex_Pico-EZmate_78171-0003_1x03-1MP_P1.20mm_Vertical" (at 159.893 38.735 0)
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" (at 159.893 38.735 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 159.893 38.735 0)

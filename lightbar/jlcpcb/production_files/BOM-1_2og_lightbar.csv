@@ -1,4 +1,6 @@
 Comment,Designator,Footprint,LCSC
 100nF,"C1,C10,C11,C12,C13,C14,C15,C16,C2,C3,C4,C5,C6,C7,C8,C9",C_0402_1005Metric,C1525
 WS2812_2020,"D1,D10,D11,D12,D13,D14,D15,D16,D2,D3,D4,D5,D6,D7,D8,D9",LED_WS2812_2020,C2976072
-Conn_01x03,J1,Molex_Pico-EZmate_78171-0003_1x03-1MP_P1.20mm_Vertical,C528029
+MountingHole_Pad,H2,MountingHole_3.2mm_M3_DIN965_Pad_TopBottom,
+Conn_01x03,J1,PinHeader_1x03_P2.54mm_Vertical,
+MountingHole_Pad,H1,MountingHole_3.2mm_M3_DIN965_Pad_TopBottom,

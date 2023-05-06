@@ -1,12 +1,35 @@
 # 1.2og repro pcb
 
+| front                           | back                          | lightbar                  |
+| --------------------------------- | --------------------------- | ------------------------- |
+| ![front of pcb](docs/front.png) | ![back of pcb](docs/back.png) | ![lightbar](docs/bar.png) |
+
 unfinished attempt to re-create pcb and lightbar for matrix 1.2og.
 
-pcb edge cuts are provided courtesy of astro of matrixlab [here](https://geekhack.org/index.php?topic=106122.msg2901076#msg2901076). it has 19.02mm spacing (mostly) based off those edge cuts. stm32f072 schematic is courtesy of xphoenixd. schematic for ws2812c-2020 rgb chain is inspired by zykrah's [fuyu](https://github.com/zykrah/fuyu). voltage step-up thing for lightbar is inspired by schematic from fuyu and dededecline and olivia's [sst60](https://github.com/dededecline/SST60).
+this has been designed by using pcb edge cuts and plate file that were provided courtesy of astro of matrixlab [here](https://geekhack.org/index.php?topic=106122.msg2901076#msg2901076). without it, re-creating the PCB would be a more maddening and expensive experience. it has 19.02mm x 19.02mm spacing (mostly). 
 
-indicator LEDs on scroll lock and caps lock. JST headers are for s3b ph 3 pin, since that's what it looks like from watching youtube build videos. split backspace and split right shift are included in spite of default plate not including those positions. iso is not included in spite of default plate including those positions. usb port placement is mostly based off guesswork and eyeballing it. there's also a nice little reset jumper beneath the space bar. also included is a little pad to ground on the back, in case you think you can add conductive foam to case to route esd shorts to ground. maybe you can solder some wire to a mounting screw or something, i don't know. this thing costs like over a hundred bucks to proto at jlcpcb and i don't have that kinda cash yet. the routing is extremely messy.
+indicator LEDs on scroll lock and caps lock. JST headers are for s3b ph 3 pin, since that's what it looks like from watching youtube build videos.
 
-lightbar mounting holes on PCB are slightly off-spec, and are plated m3 (edge cuts seem to imply the hole is a bit wider). lightbar can now connected to PCB through a molex pico ezmate cable. use the standard ones, which are 1-4, and not cables designed to be compatible with unified daughterboard s1/c4, which are wired 1-1. i fee like ezmate should be able to retain the plug even if the cable has to be bent a bit to route it, but don't quote me on that. pcb has support for JST PH and pico ezmate, while lightbar only has support for ezmate. adding direct soldered wire support is trivial if you want it though.
+## warnings/differences
+
+* The official plate file is treated as the source of truth for where switches should be placed
+  * The official 1.2OG PCB edge cuts provided by astro has some arcane spacing rules -
+    * 19.02mm on y axis for every row
+    * 19.02mm on x axis on first three rows and all arrow keys
+    * 19.00mm on row 4 on the main cluster of keys (not arrow keys)
+      * The right shift key might still be at where it would be at 19.02mm spacing. The left shift key, i'm not sure, I just placed it where it would have been at 19.02mm spacing.
+    * 18.978mmm on modifier keys in the bottom row (not sure if spacebar key is affected)
+  * all of this is ignored in favor of sticking with plate dimensions or expected plate dimensions, which are 19.02mm x 19.02mm spacing, EXCEPT
+    * the horizontal bezel that separates the function row from the rest of the board is 0.002mm shorter than you expect, and the plate reflects this
+* lightbar mounting holes on PCB are slightly off-spec, and in here are plated m3 (edge cuts seem to imply the hole is a bit wider).
+* lightbar can now connected to PCB through a molex pico ezmate cable. if you don't like it, you can assemble without it, and solder the s3b connector on yourself.
+* split backspace and split right shift are included, in case anyone is wants to make a plate that supports those switches. ISO left shift and enter are not included due to laziness.
+* usb port placement is mostly guessing.
+* there's a little reset jumper beneath the spacebar so you don't need to disassemble the thing to hit the reset button
+
+## misc
+
+stm32f072 schematic is courtesy of xphoenixd. thanks for teaching me how to design PCB's, man. schematic for ws2812c-2020 rgb chain is inspired by zykrah's [fuyu](https://github.com/zykrah/fuyu). voltage step-up thing for lightbar is inspired by schematic from fuyu and dededecline and olivia's [sst60](https://github.com/dededecline/SST60).
 
 i don't know if i'm allowed to license this, given the pcb edge cuts this is based off of were released without a license.
 
@@ -21,6 +44,6 @@ this is completely untested.
 5. consider alternative to ws2812 2020 if power consumption/cost reasons.
 6. prototype PCB and lightbar
 7. firmware (come on, this is basically automated at this point)
-8. modify lightbar to work also with direct cable soldering through cable bite/break off thing or something
+8. modify lightbar to support both direct soldering and ezmate/jst ach through mouse bite/break off thing or something
 9. verify this works with original lightbar
 
