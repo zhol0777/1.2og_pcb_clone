@@ -20,7 +20,7 @@ indicator LEDs on scroll lock and caps lock. JST headers are for s3b ph 3 pin, s
       * The right shift key might still be at where it would be at 19.02mm spacing. The left shift key, i'm not sure, I just placed it where it would have been at 19.02mm spacing.
     * 18.978mmm on modifier keys in the bottom row (not sure if spacebar key is affected)
   * all of this is ignored in favor of sticking with plate dimensions or expected plate dimensions, which are 19.02mm x 19.02mm spacing, EXCEPT
-    * the horizontal bezel that separates the function row from the rest of the board is 0.002mm shorter than you expect, and the plate reflects this
+    * 19.0224mm y-axis spacing between the function row and regular key cluster
 * lightbar mounting holes on PCB are slightly off-spec, and in here are plated m3 (edge cuts seem to imply the hole is a bit wider).
 * lightbar can now connected to PCB through a molex pico ezmate cable. if you don't like it, you can assemble without it, and solder the s3b connector on yourself.
 * split backspace and split right shift are included, in case anyone is wants to make a plate that supports those switches. ISO left shift and enter are not included due to laziness.
@@ -43,7 +43,7 @@ this is completely untested.
 4. adjust placement of ws2812 based on if it is too far to one side of the lightbar or the other.
 5. consider alternative to ws2812 2020 if power consumption/cost reasons.
 6. prototype PCB and lightbar
-7. firmware (come on, this is basically automated at this point)
+7. ~~firmware (come on, this is basically automated at this point)~~
 8. modify lightbar to support both direct soldering and ezmate/jst ach through mouse bite/break off thing or something
 9. verify this works with original lightbar
 
