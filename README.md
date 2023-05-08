@@ -21,6 +21,7 @@ indicator LEDs on scroll lock and caps lock. JST headers are for s3b ph 3 pin, s
     * 18.978mmm on modifier keys in the bottom row (not sure if spacebar key is affected)
   * all of this is ignored in favor of sticking with plate dimensions or expected plate dimensions, which are 19.02mm x 19.02mm spacing, EXCEPT
     * 19.0224mm y-axis spacing between the function row and regular key cluster
+    * the distance between the `M` and `Comma` key is 19.03mm.
 * lightbar mounting holes on PCB are slightly off-spec, and in here are plated m3 (edge cuts seem to imply the hole is a bit wider).
 * lightbar can now connected to PCB through a molex pico ezmate cable. if you don't like it, you can assemble without it, and solder the s3b connector on yourself.
 * split backspace and split right shift are included, in case anyone is wants to make a plate that supports those switches. ISO left shift and enter are not included due to laziness.
