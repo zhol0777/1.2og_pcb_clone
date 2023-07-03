@@ -41,7 +41,7 @@ i don't know if i'm allowed to license this, given the pcb edge cuts this is bas
 this is completely untested.
 
 ## todo
-
+0. fix firmware for pcb remake
 1. ~~fill out BOM real good~~
 2. measure and source standoffs that are good enough and ultra low profile screws
 3. ~~split main pcb and lightbar pcb separately so jlcpcb production files don't keep bothering each other~~
