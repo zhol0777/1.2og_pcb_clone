@@ -54,6 +54,9 @@ no working prototype has been made for this yet! beware!
 ## prototyping progress
 
 first revision (in beta branch) failed due to rookie mistake of using USB symbol from one library and footprint from another - the pins between each were in reverse order of each other, which made the prototype useless. whoops! after shipping PCBs to matt for rework, some goons looked over this in kicad pcbeditor and pointed out that the pins over USB were in reverse order.
-second revision prototype just arrived (5.31.2023), and seems to be usable, to the point where it can flash successfully and be recognized by vial-gui - the issue is that i am crap at soldering on the pins, and have destroyed the pads for USB on one of the PCBs. I need to buy a soldering wick.
+
+second prototype arrived 5.31.2023, and exhibited strange behavior - on boot to bootloader mode, dfu-util is able to flash the PCB seemingly fine, and then after reset, the PCB appears recognized by VIAL, at which point **every single device connected over the same USB hub** goes unresponsive. the pcb is also unresponsive. five seconds pass, the PCB dissapears from VIAL, and USB devices begin working again. something deeply bad has happened, so I've tried rearranging all the parts, validating BOM, and praying next revision works.
+
 the latest push to main branch uses molex 0548190519, which I haven't prototyped, but shouldn't be too different otherwise.
+
 i've bought these SMT M2 threaded spacer/standoffs so that lightbar can mount to pcb - https://www.mouser.com/ProductDetail/Wurth-Elektronik/9774015243R - you're probably supposed to use solder paste to assemble these things, but I don't have that, so I don't know, maybe I'll use solder shavings to get these things soldered on. they're slightly smaller than the m3 plated hole on pcb/lightbar, but I don't think it'll matter too much, since they should align one way or another.
