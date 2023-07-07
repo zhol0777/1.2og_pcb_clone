@@ -27,7 +27,6 @@ indicator LEDs on scroll lock and caps lock. JST headers are for s3b ph 3 pin, s
   * https://www.mouser.com/ProductDetail/Molex/36920-0301 - pick these up, and cut them down the middle to solder wires direct to lightbar
 * split backspace and split right shift are included, in case anyone is wants to make a plate that supports those switches. ISO left shift and enter are not included due to laziness.
 * usb port placement is mostly guessing.
-* there's a little reset jumper beneath the spacebar ~so you don't need to disassemble the thing to hit the reset button~. to flash pcb, bridge this jumper while plugging in USB
 * 6U spacebar support is added because I miss using my hhkb pro 2.
 
 ## misc, thanks
