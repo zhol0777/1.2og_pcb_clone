@@ -19,16 +19,17 @@
     },
     "diode_direction": "COL2ROW",
     "matrix_pins": {
-        "rows": ["B7", "B6", "B5", "A5", "B9", "B8"],
-        "cols": ["A1", "A0", "F1", "A6", "A7", "A4", "F0", "A3", "A2", "B15", "B14", "B13", "B12", "A14", "A15", "B3", "B4"]
+        "rows": ["B7", "B3", "A14", "A0", "C14", "C15"],
+        "cols": ["B11", "B10", "B2", "B1", "B0", "A7", "A6", "A5", "A4", "A3", "A1", "A2", "F1", "F0", "B5", "B4", "A15"]
     },
     "indicators": {
-        "caps_lock": "A8",
-        "scroll_lock": "A13"
+        "caps_lock": "B12",
+        "scroll_lock": "B6",
+        "num_lock": "B13"
     },
     "rgblight": {
         "led_count": 16,
-        "pin": "B11",
+        "pin": "C13",
         "hue_steps": 10,
         "saturation_steps": 17,
         "brightness_steps": 17,
