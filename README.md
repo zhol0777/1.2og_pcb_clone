@@ -34,14 +34,13 @@ indicator LEDs on scroll lock and caps lock. JST headers are for s3b ph 3 pin, s
 
 stm32f072 schematic is courtesy of xphoenixd. thanks for teaching me how to design PCB's, man. schematic for ws2812c-2020 rgb chain is inspired by zykrah's [fuyu](https://github.com/zykrah/fuyu). voltage step-up thing for lightbar is inspired by schematic from fuyu and dededecline and olivia's [sst60](https://github.com/dededecline/SST60).
 
-basic reset circuit provided by xyz, who also pointed out an issue in the BOM that caused one major issue with the first round of prototypes - were it not for him, I'd probably make two more rounds of protos with the same issue. all love to matthewdias, islandworks, and mel for pointing out the massive issue with USB, and doubly so for matt for being willing to replace 0402 package resistors pro bono after xyz pointed out how a BOM mistake from me rendered the reset circuit useless.
+an earlier revision included a basic reset circuit provided by xyz, who also pointed out an issue in the BOM that caused one major issue with the first round of prototypes - were it not for him, I'd probably make two more rounds of protos with the same issue. all love to matthewdias, islandworks, and mel for pointing out a glaring issue with USB, and doubly so for matt for being willing to replace 0402 package resistors pro bono after xyz pointed out how a BOM mistake from me rendered the reset circuit useless. thanks to chippy for some advice on how to design this.
 
-i don't know if i'm allowed to license this, given the pcb edge cuts this is based off of were released without a license.
+i don't know if i'm allowed to license this, given the pcb edge cuts this is based off of were released without a license. nevertheless, they were provided by astro from matrixlab. thank you!
 
-this is completely untested.
+no working prototype has been made for this yet! beware!
 
 ## todo
-0. fix firmware for pcb remake
 1. ~~fill out BOM real good~~
 2. measure and source standoffs that are good enough and ultra low profile screws
 3. ~~split main pcb and lightbar pcb separately so jlcpcb production files don't keep bothering each other~~
